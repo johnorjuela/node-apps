@@ -3,6 +3,9 @@ const displayValorActual = document.getElementById('numactual');
 const botonNumeros = document.querySelectorAll('.numero');
 const botonOperador = document.querySelectorAll('.operador');
 
-const Calculadora = new Calculadora();
+const display = new Display(displayValorAnterior, displayValorActual)
 
-botonNumeros.forEach
+
+botonNumeros.forEach(boton => {
+    boton.addEventListener('click', ()=>display.agregarNumero(boton.innerHTML));
+});
