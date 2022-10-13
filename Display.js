@@ -3,12 +3,20 @@ class Display {
         this.displayValorActual = displayValorActual;
         this.displayValorAnterior = displayValorAnterior;
         this.calculadora = new Calculadora();
+        this.tipoDeOperacion= undefined;
         this.valorActual = '';
         this.valorAnterior = '';
     }
 
     borrar(){
         this.valorActual = this.valorActual.toString().slice(0,-1);
+        this.imprimirValores();
+    }
+
+    borrarTodo() {
+        this.valorActual = '0';
+        this.valorAnterior = '';
+        this.tipoDeOperacion = undefined;
         this.imprimirValores();
     }
 
